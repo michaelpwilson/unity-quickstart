@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <title>Jet Chat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <script src="//connect.facebook.net/en_US/sdk.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="modules/core-js/client/shim.min.js"></script>
+
+    <script src="modules/zone.js/dist/zone.js"></script>
+    <script src="modules/reflect-metadata/Reflect.js"></script>
+    <script src="modules/systemjs/dist/system.src.js"></script>
+
+    <script>
+      FB.init({
+          appId      : '1110402682412267',
+          cookie     : false,  // enable cookies to allow the server to access
+                              // the session
+          xfbml      : true,  // parse social plugins on this page
+          version    : 'v2.8' // use graph api version 2.5
+      });
+      (function (global) {
+        System.config({
+          paths: {
+            // paths serve as alias
+            'npm:': '/modules/'
+          },
+          // map tells the System loader where to look for things
+          map: {
+            // our app is within the app folder
+            app: '',
+            // angular bundles
+            '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
+            '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
+            '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
+            '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
+            '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+            '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
+            '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
+            '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+            'rxjs': 'npm:rxjs',
+            'socket.io-client': 'modules/socket.io-client/dist/socket.io.min.js',
+            'mapbox-gl': 'npm:mapbox-gl/dist/mapbox-gl.js',
+            'angular2-mapbox/core': 'npm:angular2-mapbox/core/core.umd.js',
+            'moment': 'npm:moment/min/moment.min.js'
+          },
+          packages: {
+            app: {
+              main: './config/bootstrap.js',
+              defaultExtension: 'js'
+            },
+            rxjs: {
+              defaultExtension: 'js'
+            }
+          }
+        });
+      })(this);
+
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>
+      	<div class="loading" style="text-align: center; padding-top: 20%;">
+			<?xml version="1.0" encoding="utf-8"?><svg width='120px' height='120px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-poi"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><g transform="translate(50,45)"><g><g transform="translate(-50,-45)"><path d="M77.5,45.3c0-15.3-12.3-27.8-27.5-27.8S22.5,29.9,22.5,45.3c0,13.3,9.3,24.5,21.7,27.1L50,82.5l5.8-10.1 C68.2,69.7,77.5,58.6,77.5,45.3z M50.3,55.4c-5.4,0-9.7-4.4-9.7-9.8c0-5.4,4.3-9.8,9.7-9.8s9.7,4.4,9.7,9.8 C60,51,55.7,55.4,50.3,55.4z" fill="#707078"><animateTransform attributeName="transform" type="translate" dur="1s" repeatCount="indefinite" from="0,17" to="0,17" values="0,17;0,-17;0,17" keyTimes="0;0.5;1" keySplines="0.4 0.8 0.4 0.8;0.8 0.4 0.8 0.4" calcMode="spline"></animateTransform></path></g><animateTransform attributeName="transform" type="none" from="0" to="360" dur="1s" repeatCount="indefinite"></animateTransform></g></g></svg>
+			<span style="display: block">Loading ...</span>
+		</div>
+    </my-app>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90765383-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

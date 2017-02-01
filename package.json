@@ -1,0 +1,25 @@
+{
+  "name": "vegan",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".tmp/app.js",
+  "scripts": {
+    "start": "tsc && node .tmp/app.js"
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "dependencies": {
+    "@unity/core": "latest",
+    "bcryptjs": "2.4.0",
+    "bookshelf": "^0.10.2",
+    "font-awesome": "^4.7.0",
+    "jsonwebtoken": "^7.2.1",
+    "knex": "^0.12.6",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.11",
+    "mysql": "^2.12.0"
+  },
+  "author": "Michael P Wilson",
+  "license": "ISC"
+}
